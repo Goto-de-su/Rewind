@@ -41,8 +41,17 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Monster
+    uniqueID: 3089577163
+    locked: 0
+  - name: MidleWorld
+    uniqueID: 2284327249
+    locked: 0
   - name: Player
     uniqueID: 953430091
+    locked: 0
+  - name: UI
+    uniqueID: 842138129
     locked: 0
   m_RenderingLayers:
   - Default
@@ -50,6 +59,6 @@ TagManager:
   - Light Layer 2
   - Light Layer 3
   - Light Layer 4
-  - Light Layer 5
+  - Monster
   - Light Layer 6
   - Light Layer 7
