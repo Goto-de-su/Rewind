@@ -18,6 +18,11 @@ public class Sticker
         return this.value;
     }
 
+    public Sprite GetStickerIcon()
+    {
+        return this.icon;
+    }
+
     /// <summary>
     /// 攻撃ステッカーの行動処理
     /// </summary>
