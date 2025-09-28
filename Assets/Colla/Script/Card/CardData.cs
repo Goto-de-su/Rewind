@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class CardData : ScriptableObject
 {
     public string cardName;
+    public Sprite cardPicture;
     public int cost;
     public int stickerMaxNum;
     public List<Sticker> stickers;

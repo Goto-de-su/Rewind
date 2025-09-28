@@ -6,6 +6,7 @@ using System;
 public class Card
 {
     private Guid uuid;
+
     [SerializeField] private CardData data;
 
     public Card(CardData cardData)
