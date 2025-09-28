@@ -23,7 +23,7 @@ public class Charactor : MonoBehaviour
     public void SetCard(Card addCard)
     {
         cardList.Add(addCard);
-        List<Sticker> stickerDatas = addCard.GetCardInfo();
+        List<Sticker> stickerDatas = addCard.GetCardInfo().stickers;
         foreach (Sticker stickerdata in stickerDatas)
         {
             actionList.Add(stickerdata);

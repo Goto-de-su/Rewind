@@ -15,9 +15,9 @@ public class Card
         this.data = cardData;
     }
 
-    public List<Sticker> GetCardInfo()
+    public CardData GetCardInfo()
     {
-        return this.data.stickers;
+        return this.data;
     }
 
 }
