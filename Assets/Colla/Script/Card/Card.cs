@@ -7,17 +7,14 @@ public class Card
 {
     private Guid uuid;
 
-    [SerializeField] private CardData data;
+    [SerializeField] private CardData cardData;
+
+    public Guid Uuid => this.uuid;
+    public CardData CardData => this.cardData;
 
     public Card(CardData cardData)
     {
         this.uuid = Guid.NewGuid();
-        this.data = cardData;
+        this.cardData = cardData;
     }
-
-    public CardData GetCardInfo()
-    {
-        return this.data;
-    }
-
 }

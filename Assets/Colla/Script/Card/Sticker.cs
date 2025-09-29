@@ -8,13 +8,13 @@ public class Sticker
     [SerializeField] private int value;
     [SerializeField] private Sprite icon;
 
-    // ƒvƒƒpƒeƒB
+    // ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£
     public StickerType Type => type;
     public int Value => value;
     public Sprite Icon => icon;
 
     /// <summary>
-    /// UŒ‚ƒXƒeƒbƒJ[‚Ìs“®ˆ—
+    /// æ”»æ’ƒã‚¹ãƒ†ãƒƒã‚«ãƒ¼ã®è¡Œå‹•å‡¦ç†
     /// </summary>
     public void Attack(GameObject enemy)
     {
@@ -22,7 +22,7 @@ public class Sticker
     }
 
     /// <summary>
-    /// –hŒäƒXƒeƒbƒJ[‚Ìs“®ˆ—
+    /// é˜²å¾¡ã‚¹ãƒ†ãƒƒã‚«ãƒ¼ã®è¡Œå‹•å‡¦ç†
     /// </summary>
     public void Defence(GameObject you)
     {
@@ -30,7 +30,7 @@ public class Sticker
     }
 
     /// <summary>
-    /// ~‚QƒXƒeƒbƒJ[‚Ìs“®ˆ—
+    /// Ã—ï¼’ã‚¹ãƒ†ãƒƒã‚«ãƒ¼ã®è¡Œå‹•å‡¦ç†
     /// </summary>
     public void Double(GameObject you)
     {
@@ -39,7 +39,7 @@ public class Sticker
     }
 
     /// <summary>
-    /// ƒhƒ[ƒXƒeƒbƒJ[‚Ìs“®ˆ—
+    /// ãƒ‰ãƒ­ãƒ¼ã‚¹ãƒ†ãƒƒã‚«ãƒ¼ã®è¡Œå‹•å‡¦ç†
     /// </summary>
     public void Draw()
     {
@@ -47,7 +47,7 @@ public class Sticker
     }
 
     /// <summary>
-    /// UŒ‚Žó‚¯ƒXƒeƒbƒJ[‚Ìs“®ˆ—
+    /// æ”»æ’ƒå—ã‘ã‚¹ãƒ†ãƒƒã‚«ãƒ¼ã®è¡Œå‹•å‡¦ç†
     /// </summary>
     public void AfterOpponentAction(GameObject you)
     {
@@ -55,7 +55,7 @@ public class Sticker
     }
 
     /// <summary>
-    /// ‰ñ•œƒXƒeƒbƒJ[‚Ìs“®ˆ—
+    /// å›žå¾©ã‚¹ãƒ†ãƒƒã‚«ãƒ¼ã®è¡Œå‹•å‡¦ç†
     /// </summary>
     public void Recover(GameObject you)
     {

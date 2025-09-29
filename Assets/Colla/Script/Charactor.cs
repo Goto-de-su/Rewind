@@ -11,7 +11,7 @@ public class Charactor : MonoBehaviour
     private int actionIndex;
     private bool hasBroken;
 
-    // UŒ‚‚·‚éƒIƒuƒWƒFƒNƒg
+    // æ”»æ’ƒã™ã‚‹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
     [SerializeField] private GameObject enemy;
 
     private void Awake()
@@ -23,7 +23,7 @@ public class Charactor : MonoBehaviour
     public void SetCard(Card addCard)
     {
         cardList.Add(addCard);
-        List<Sticker> stickerDatas = addCard.GetCardInfo().stickers;
+        List<Sticker> stickerDatas = addCard.CardData.Stickers;
         foreach (Sticker stickerdata in stickerDatas)
         {
             actionList.Add(stickerdata);
@@ -31,7 +31,7 @@ public class Charactor : MonoBehaviour
     }
 
     /// <summary>
-    /// UŒ‚
+    /// æ”»æ’ƒ
     /// </summary>
     /// <param name="value"></param>
     public void Attack(int value)
@@ -40,7 +40,7 @@ public class Charactor : MonoBehaviour
     }
 
     /// <summary>
-    /// ‰ñ•œ
+    /// å›å¾©
     /// </summary>
     /// <param name="value"></param>
     public void AddHp(int value)
@@ -54,7 +54,7 @@ public class Charactor : MonoBehaviour
     }
 
     /// <summary>
-    /// –hŒä
+    /// é˜²å¾¡
     /// </summary>
     /// <param name="value"></param>
     public void AddDefence(int value)
@@ -63,7 +63,7 @@ public class Charactor : MonoBehaviour
     }
 
     /// <summary>
-    /// ~2
+    /// Ã—2
     /// </summary>
     /// <param name="value"></param>
     public void DoubleAction(int value)
@@ -73,7 +73,7 @@ public class Charactor : MonoBehaviour
     }
 
     /// <summary>
-    /// “G‚Ìs“®Œã
+    /// æ•µã®è¡Œå‹•å¾Œ
     /// </summary>
     public void RestrictAfterEnemyAction()
     {
@@ -85,13 +85,13 @@ public class Charactor : MonoBehaviour
         this.hasBroken = true;
     }
 
-    // s“®ƒCƒ“ƒfƒbƒNƒX‚ğ•ÏX
+    // è¡Œå‹•ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã‚’å¤‰æ›´
     public void ChangeIndex()
     {
         this.actionIndex = 0;
     }
 
-    // s‚Á‚½s“®‚ğÁ‹
+    // è¡Œã£ãŸè¡Œå‹•ã‚’æ¶ˆå»
     public void RemoveAction()
     {
         this.actionList.RemoveAt(this.actionIndex);
@@ -114,10 +114,10 @@ public class Charactor : MonoBehaviour
                 DoubleAction(value);
                 break;
             case StickerType.Draw:
-                // ƒhƒ[ˆ—‚ğ‚Â‚­‚Á‚½‚ç‘}“ü
+                // ãƒ‰ãƒ­ãƒ¼å‡¦ç†ã‚’ã¤ãã£ãŸã‚‰æŒ¿å…¥
                 break;
             case StickerType.AfterEnemyAction:
-                // v‚¢‚Â‚©‚È‚©‚Á‚½
+                // æ€ã„ã¤ã‹ãªã‹ã£ãŸ
                 RestrictAfterEnemyAction();
                 break;
             case StickerType.Recover:
