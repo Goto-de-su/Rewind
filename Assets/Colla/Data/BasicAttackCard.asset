@@ -13,9 +13,7 @@ MonoBehaviour:
   m_Name: BasicAttackCard
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   cardName: BasicAttack
+  cardPicture: {fileID: 0}
   cost: 2
   stickerMaxNum: 1
-  stickers:
-  - type: 0
-    value: 5
-    icon: {fileID: 0}
+  stickers: []

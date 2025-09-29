@@ -8,20 +8,10 @@ public class Sticker
     [SerializeField] private int value;
     [SerializeField] private Sprite icon;
 
-    public StickerType GetStickerType()
-    {
-        return this.type;
-    }
-
-    public int GetStickerValue()
-    {
-        return this.value;
-    }
-
-    public Sprite GetStickerIcon()
-    {
-        return this.icon;
-    }
+    // プロパティ
+    public StickerType Type => type;
+    public int Value => value;
+    public Sprite Icon => icon;
 
     /// <summary>
     /// 攻撃ステッカーの行動処理
