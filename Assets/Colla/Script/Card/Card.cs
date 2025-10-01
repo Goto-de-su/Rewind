@@ -6,10 +6,12 @@ using System;
 public class Card
 {
     private Guid uuid;
-
+    private CharactorRole user;
     [SerializeField] private CardData cardData;
 
+    // プロパティ
     public Guid Uuid => this.uuid;
+    public CharactorRole User => this.user;
     public CardData CardData => this.cardData;
 
     public Card(CardData cardData)

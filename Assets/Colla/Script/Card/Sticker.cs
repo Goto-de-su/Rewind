@@ -51,7 +51,7 @@ public class Sticker
     /// </summary>
     public void AfterOpponentAction(GameObject you)
     {
-        you.GetComponent<Charactor>().HasBroken();
+        you.GetComponent<Charactor>().SetBroken();
     }
 
     /// <summary>

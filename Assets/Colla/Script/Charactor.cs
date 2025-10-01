@@ -3,13 +3,25 @@ using System.Collections.Generic;
 
 public class Charactor : MonoBehaviour
 {
+    [SerializeField] private CharactorRole role;
     [SerializeField] private string charactorName;
-    [SerializeField] private int hp;
+    [Min(1),SerializeField] private int hp;
+
     [SerializeField] private int defence;
     private List<Card> cardList;
     private  List<Sticker> actionList;
     private int actionIndex;
     private bool hasBroken;
+
+    // プロパティ
+    public CharactorRole Role => this.role;
+    public string CharactorName => this.charactorName;
+    public int Hp => this.hp;
+    public int Defence => this.defence;
+    public List<Card> CardList => this.cardList;
+    public List<Sticker> ActionList => this.actionList;
+    public int ActionIndex => this.actionIndex;
+    public bool HasBroken => this.hasBroken;
 
     // 攻撃するオブジェクト
     [SerializeField] private GameObject enemy;
@@ -20,10 +32,13 @@ public class Charactor : MonoBehaviour
         actionList = new List<Sticker>();
     }
 
+    
     public void SetCard(Card addCard)
     {
+        // 作り方変える
         cardList.Add(addCard);
-        List<Sticker> stickerDatas = addCard.CardData.Stickers;
+        // キャストでごまかしてる
+        List<Sticker> stickerDatas = (List<Sticker>)addCard.CardData.Stickers;
         foreach (Sticker stickerdata in stickerDatas)
         {
             actionList.Add(stickerdata);
@@ -77,10 +92,10 @@ public class Charactor : MonoBehaviour
     /// </summary>
     public void RestrictAfterEnemyAction()
     {
-
+        // 思いつかなかった
     }
 
-    public void HasBroken()
+    public void SetBroken()
     {
         this.hasBroken = true;
     }
@@ -117,7 +132,6 @@ public class Charactor : MonoBehaviour
                 // ドロー処理をつくったら挿入
                 break;
             case StickerType.AfterEnemyAction:
-                // 思いつかなかった
                 RestrictAfterEnemyAction();
                 break;
             case StickerType.Recover:
