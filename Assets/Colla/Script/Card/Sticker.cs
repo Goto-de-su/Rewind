@@ -2,16 +2,38 @@ using UnityEngine;
 using System;
 
 [Serializable]
-public class Sticker
+public class Sticker:MonoBehaviour
 {
     [SerializeField] private StickerType type;
     [SerializeField] private int value;
     [SerializeField] private Sprite icon;
+    private IStickerEffect effect;
 
     // プロパティ
     public StickerType Type => type;
     public int Value => value;
     public Sprite Icon => icon;
+
+    public void UseSticker(GameObject player, GameObject enemy)
+    {
+        if(effect == null)
+        {
+            return;
+        }
+
+        effect.UseEffect(player, enemy, this.value);
+    }
+
+    private IStickerEffect ConvertType2Effect()
+    {
+        switch (this.type)
+        {
+            case StickerType.Attack:
+                return GetComponent<AttackStickerEffect>();
+            default:
+                return null;
+        }
+    }
 
     /// <summary>
     /// 攻撃ステッカーの行動処理
