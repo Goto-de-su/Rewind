@@ -15,5 +15,5 @@ MonoBehaviour:
   cardName: BasicAttack
   cardPicture: {fileID: 0}
   cost: 2
-  stickerMaxNum: 1
+  stickerMaxNum: 3
   stickers: []
