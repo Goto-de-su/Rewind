@@ -93,7 +93,7 @@ public class CardVisualController : MonoBehaviour, IPointerClickHandler
 
 		for (int i = 0; i < stickers.Count; i++)
 		{
-			Sticker sticker = stickers[i];
+			StickerData sticker = stickers[i];
 			if (sticker == null) { continue; }
 
 			stickerInfos.Add(new StickerInfo(sticker.Type, sticker.Value, sticker.Icon));
