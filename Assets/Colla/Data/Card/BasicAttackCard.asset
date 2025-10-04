@@ -16,4 +16,5 @@ MonoBehaviour:
   cardPicture: {fileID: 0}
   cost: 2
   stickerMaxNum: 3
-  stickers: []
+  stickers:
+  - {fileID: 11400000, guid: cb4eccba7f0ae68438b329144d0ba2d8, type: 2}

@@ -114,8 +114,8 @@ public class Charactor : MonoBehaviour
 
     private void Sticker2Action(Sticker sticker)
     {
-        StickerType type = sticker.Type;
-        int value = sticker.Value;
+        StickerType type = sticker.StickerData.Type;
+        int value = sticker.StickerData.Value;
 
         switch (type)
         {

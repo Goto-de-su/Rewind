@@ -4,29 +4,25 @@ using System;
 [Serializable]
 public class Sticker:MonoBehaviour
 {
-    [SerializeField] private StickerType type;
-    [SerializeField] private int value;
-    [SerializeField] private Sprite icon;
-    private IStickerEffect effect;
-
-    // プロパティ
-    public StickerType Type => type;
-    public int Value => value;
-    public Sprite Icon => icon;
+    [SerializeField] private StickerData stickerData;
+    public StickerData StickerData;
 
     public void UseSticker(EffectContext context)
     {
-        if(effect == null)
+        if(stickerData.Effect == null)
         {
             return;
         }
 
-        effect.UseEffect(context, this.value);
+        if(stickerData.Effect is IStickerEffect effect)
+        {
+            effect.UseEffect(context, stickerData.Value);
+        }
     }
 
     private IStickerEffect ConvertType2Effect()
     {
-        switch (this.type)
+        switch (stickerData.Type)
         {
             case StickerType.Attack:
                 return GetComponent<AttackStickerEffect>();
@@ -40,7 +36,7 @@ public class Sticker:MonoBehaviour
     /// </summary>
     public void Attack(GameObject enemy)
     {
-        enemy.GetComponent<Charactor>().SubstractHp(value);
+        enemy.GetComponent<Charactor>().SubstractHp(stickerData.Value);
     }
 
     /// <summary>
@@ -48,7 +44,7 @@ public class Sticker:MonoBehaviour
     /// </summary>
     public void Defence(GameObject you)
     {
-        you.GetComponent<Charactor>().AddDefence(value);
+        you.GetComponent<Charactor>().AddDefence(stickerData.Value);
     }
 
     /// <summary>
@@ -81,6 +77,6 @@ public class Sticker:MonoBehaviour
     /// </summary>
     public void Recover(GameObject you)
     {
-        you.GetComponent<Charactor>().SubstractHp(value);
+        you.GetComponent<Charactor>().SubstractHp(stickerData.Value);
     }
 }

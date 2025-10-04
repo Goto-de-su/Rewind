@@ -11,7 +11,6 @@ public class Card
 
     // プロパティ
     public Guid Uuid => this.uuid;
-    
     public CardData CardData => this.cardData;
     public int Priority => this.priority;
     public Card(CardData cardData)
