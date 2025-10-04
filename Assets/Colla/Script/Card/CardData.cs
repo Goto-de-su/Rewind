@@ -7,6 +7,7 @@ public class CardData : ScriptableObject
     [SerializeField] private string cardName;
     [SerializeField] private Sprite cardPicture;
     [Min(0), SerializeField] private int cost;
+    [SerializeField] private int priority;
     [Min(1), SerializeField] private int stickerMaxNum = 4;
     [SerializeField] private StickerData[] stickers = System.Array.Empty<StickerData>();
 
@@ -14,6 +15,7 @@ public class CardData : ScriptableObject
     public string CardName => this.cardName;
     public Sprite CardPicture => this.cardPicture;
     public int Cost => this.cost;
+    public int Priority => this.priority;
     public int StickerMaxNum => this.stickerMaxNum;
     public IReadOnlyList<StickerData> Stickers => this.stickers;
 
