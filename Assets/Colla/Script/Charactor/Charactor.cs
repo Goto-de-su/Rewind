@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class Charactor : MonoBehaviour
 {
-    [SerializeField] private CharactorRole role;
+    [SerializeField] private CharactorRoleData role;
     [SerializeField] private string charactorName;
     [Min(1),SerializeField] private int hp;
 
@@ -14,7 +14,7 @@ public class Charactor : MonoBehaviour
     private bool hasBroken;
 
     // プロパティ
-    public CharactorRole Role => this.role;
+    public CharactorRoleData Role => this.role;
     public string CharactorName => this.charactorName;
     public int Hp => this.hp;
     public int Defence => this.defence;

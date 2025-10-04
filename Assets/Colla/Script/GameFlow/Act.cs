@@ -1,34 +1,34 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class Action
+public class Act
 {
-    [SerializeField] private CharactorRole role;
+    [SerializeField] private CharactorRoleData role;
     private bool isAvailable = true;
-    private List<Card> cards;
+    private EffectContext context;
 
-    // ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£
-    private CharactorRole Role => this.role;
+    // ƒvƒƒpƒeƒB
+    private CharactorRoleData Role => this.role;
     private bool IsAvailable => this.isAvailable;
-    public Card Card { get; set; }
+    public List<Card> Cards { get; set; }
 
     public void TakeAction()
     {
-        foreach (Card card in this.cards)
+        foreach (Card card in this.Cards)
         {
             this.UseCard(card);
         }
     }
 
     /// <summary>
-    /// ã‚«ãƒ¼ãƒ‰ã®åŠ¹æœã‚’é †ã«ç™ºå‹•
+    /// ƒJ[ƒh‚ÌŒø‰Ê‚ğ‡‚É”­“®
     /// </summary>
     /// <param name="card"></param>
     private void UseCard(Card card)
     {
         foreach (Sticker sticker in card.CardData.Stickers)
         {
-            sticker.UseSticker(CharactorController.player, CharactorController.enemy);
+            sticker.UseSticker(context);
         }
     }
 }

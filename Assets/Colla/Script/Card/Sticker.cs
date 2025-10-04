@@ -14,14 +14,14 @@ public class Sticker:MonoBehaviour
     public int Value => value;
     public Sprite Icon => icon;
 
-    public void UseSticker(GameObject player, GameObject enemy)
+    public void UseSticker(EffectContext context)
     {
         if(effect == null)
         {
             return;
         }
 
-        effect.UseEffect(player, enemy, this.value);
+        effect.UseEffect(context, this.value);
     }
 
     private IStickerEffect ConvertType2Effect()

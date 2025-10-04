@@ -3,8 +3,8 @@ using System.Collections.Generic;
 
 public class ScheduleItem
 {
-    private List<Action> actions;
-    public List<Action> Actions => this.actions;
+    private List<Act> actions;
+    public List<Act> Actions => this.actions;
 
     private void SetActionOrder()
     {
