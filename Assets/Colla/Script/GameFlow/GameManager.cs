@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        SetState(GameFlowState.PlayerTrunStart);
+        SetState(GameFlowState.Initialize);
     }
 
     private void SetState(GameFlowState nextState)
@@ -15,7 +15,5 @@ public class GameManager : MonoBehaviour
         {
             return;
         }
-
-
     }
 }
