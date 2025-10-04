@@ -12,6 +12,11 @@ public class Act
     private bool IsAvailable => this.isAvailable;
     public List<Card> Cards { get; set; }
 
+    public void RegisterAction(Card card)
+    {
+        Cards.Add(card);
+    }
+
     public void TakeAction()
     {
         foreach (Card card in this.Cards)

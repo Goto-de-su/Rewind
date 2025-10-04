@@ -11,6 +11,7 @@ public class AttackStickerEffect : ScriptableObject, IStickerEffect
             Debug.Log("エネミーオブジェクトにキャラクタークラスがついていません。");
         }
         enemy.SubstractHp(value);
+        Debug.Log("攻撃しました。");
     }
 
     private void OnValidate() => ClampStickers();
