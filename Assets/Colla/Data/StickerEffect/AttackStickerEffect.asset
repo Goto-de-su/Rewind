@@ -9,12 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b18e42e799a4fe48962c20e36e697b2, type: 3}
-  m_Name: a
+  m_Script: {fileID: 11500000, guid: 8dce38d2bf43d0e4580f67baa40c5121, type: 3}
+  m_Name: AttackStickerEffect
   m_EditorClassIdentifier: 
-  roleName: 0
-  context:
-    player: {fileID: 0}
-    enemy: {fileID: 0}
-    deck: {fileID: 0}
-    timeIndex: {fileID: 0}

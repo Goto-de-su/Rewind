@@ -7,7 +7,7 @@ public class Act
     private bool isAvailable = true;
     private EffectContext context;
 
-    // ƒvƒƒpƒeƒB
+    // ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£
     private CharactorRoleData Role => this.role;
     private bool IsAvailable => this.isAvailable;
     public List<Card> Cards { get; set; }
@@ -21,12 +21,12 @@ public class Act
     }
 
     /// <summary>
-    /// ƒJ[ƒh‚ÌŒø‰Ê‚ğ‡‚É”­“®
+    /// ã‚«ãƒ¼ãƒ‰ã®åŠ¹æœã‚’é †ã«ç™ºå‹•
     /// </summary>
     /// <param name="card"></param>
     private void UseCard(Card card)
     {
-        foreach (Sticker sticker in card.CardData.Stickers)
+        foreach (StickerData sticker in card.CardData.Stickers)
         {
             sticker.UseSticker(context);
         }

@@ -648,7 +648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473508eaade4b2d42bda73f45a89eda4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Charactor
-  role: 0
+  role: {fileID: 0}
   charactorName: Enemy
   hp: 120
   defence: 0
@@ -1759,7 +1759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473508eaade4b2d42bda73f45a89eda4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Charactor
-  role: 0
+  role: {fileID: 0}
   charactorName: Player
   hp: 40
   defence: 0
@@ -1861,6 +1861,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1703143100}
   - component: {fileID: 1703143101}
+  - component: {fileID: 1703143102}
   m_Layer: 0
   m_Name: Deck
   m_TagString: Untagged
@@ -1895,6 +1896,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aecfa0b204806e4fb95633cf7db7312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Deck
+--- !u!114 &1703143102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703143099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b23da9615c9c5a498a138084ba5cd7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stickerData: {fileID: 0}
+  StickerData: {fileID: 0}
 --- !u!1 &1770890598
 GameObject:
   m_ObjectHideFlags: 0

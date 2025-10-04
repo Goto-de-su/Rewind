@@ -8,22 +8,21 @@ public class CardData : ScriptableObject
     [SerializeField] private Sprite cardPicture;
     [Min(0), SerializeField] private int cost;
     [Min(1), SerializeField] private int stickerMaxNum = 4;
-    [SerializeField] private Sticker[] stickers = System.Array.Empty<Sticker>();
+    [SerializeField] private StickerData[] stickers = System.Array.Empty<StickerData>();
 
     // プロパティ
     public string CardName => this.cardName;
     public Sprite CardPicture => this.cardPicture;
     public int Cost => this.cost;
     public int StickerMaxNum => this.stickerMaxNum;
-    public IReadOnlyList<Sticker> Stickers => this.stickers;
-
+    public IReadOnlyList<StickerData> Stickers => this.stickers;
 
     private void OnValidate() => ClampStickers();
     private void OnEnable() => ClampStickers();
 
     private void ClampStickers()
     {
-        if (stickers == null) { stickers = System.Array.Empty<Sticker>(); }
+        if (stickers == null) { stickers = System.Array.Empty<StickerData>(); }
         if (stickerMaxNum < 1) stickerMaxNum = 1;
 
         if (stickers.Length > stickerMaxNum)
