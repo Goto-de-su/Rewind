@@ -11,7 +11,7 @@ public class Deck : MonoBehaviour
 
     private void Start()
     {
-        this.deckCards.Clear();
+        //this.deckCards.Clear();
         CreateDeckCards();
         ShuffleDeck();
     }
@@ -24,6 +24,7 @@ public class Deck : MonoBehaviour
         foreach (CardData deckPreset in this.deckPreset.DeckPreset)
         {
             Card newCard = new Card(deckPreset);
+            Debug.Log(newCard.CardData.CardName);
             this.AddDeckCards(newCard);
         }
     }

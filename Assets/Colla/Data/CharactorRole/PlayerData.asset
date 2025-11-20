@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roleName: 0
   context:
-    player: {fileID: 0}
-    enemy: {fileID: 0}
-    deck: {fileID: 0}
-    timeIndex: {fileID: 0}
+    player: {fileID: 1767308734521101201, guid: df3face24aec7aa49945240c92b9a99b, type: 3}
+    enemy: {fileID: 7084787923651267614, guid: 4e9f59c77b1949444898017c3ed81953, type: 3}
+    hands: {fileID: 8968770330975755951, guid: eaff3cb52f0727143ba65a7c8a0f70d8, type: 3}
+    time: {fileID: 4499793540512417097, guid: eb49e919e8edf244cba5c17f036894f5, type: 3}

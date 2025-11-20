@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class Hand
+public class Hand:MonoBehaviour
 {
     [SerializeField] private List<Card> hands;
     [SerializeField] private CardContext context;
